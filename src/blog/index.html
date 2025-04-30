@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/css/style.css">
+<title>Blog</title>
+</head>
+<body>
+    <h1>Carmelo Sanchez</h1>
+    <h3>
+        <a style="text-decoration:none;color:inherit;"href="./resume/Carmelo_Sanchez_Resume.pdf"><b>Resume</b></a> | <a style="text-decoration:none;color: inherit;"rel="OP.GG" href="https://www.op.gg/summoners/na/Vayne%20666-0001"><b>OP.GG</b></a> | Blog
+    </h3>
+    <hr>
+    <div class="container">
+        <aside class="side-index">
+            <h3>Categories</h3>
+            <div class="category-container">
+                <div class="category-card" onclick="showCategory('ctf')">
+                    <h3>CTFs</h3>
+                </div>
+                <div class="category-card" onclick="showCategory('tech')">
+                    <h3>Technology</h3>
+                </div>
+                <div class="category-card" onclick="showCategory('gaming')">
+                    <h3>Gaming</h3>
+                </div>
+                <div class="category-card" onclick="showCategory('life')">
+                    <h3>Life</h3>
+                </div>
+            </div>
+        </aside>
+
+        <main class="blog-content">
+            <div id="ctf-content" class="category-content">
+                <div class="blog-post">
+                    <h2>Latest CTF Write-up</h2>
+                    <p>Date: January 1, 2024</p>
+                    <p>Latest capture the flag challenge solution...</p>
+                    <a href="#" style="color: var(--accent-color);">Read more →</a>
+                </div>
+            </div>
+
+            <div id="tech-content" class="category-content">
+                <div class="blog-post">
+                    <h2>Latest Tech Post</h2>
+                    <p>Date: January 1, 2024</p>
+                    <p>Latest technology insights...</p>
+                    <a href="#" style="color: var(--accent-color);">Read more →</a>
+                </div>
+            </div>
+
+            <div id="gaming-content" class="category-content">
+                <div class="blog-post">
+                    <h2>Latest Gaming Post</h2>
+                    <p>Date: January 1, 2024</p>
+                    <p>Latest gaming adventures...</p>
+                    <a href="#" style="color: var(--accent-color);">Read more →</a>
+                </div>
+            </div>
+
+            <div id="life-content" class="category-content">
+                <div class="blog-post">
+                    <h2>Latest Life Update</h2>
+                    <p>Date: January 1, 2024</p>
+                    <p>Latest life experiences...</p>
+                    <a href="#" style="color: var(--accent-color);">Read more →</a>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        function showCategory(category) {
+            // Hide all category content
+            document.querySelectorAll('.category-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            
+            // Show selected category
+            document.getElementById(`${category}-content`).classList.add('active');
+        }
+
+        // Show CTF content by default
+        showCategory('ctf');
+    </script>
+</body>
+</html>
