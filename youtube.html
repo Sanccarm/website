@@ -3,66 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YouTube Video Gallery</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>CTF Writeups - YouTube Gallery</title>
+    <meta name="description" content="Carmelo Sanchez's CTF writeups and cybersecurity tutorials on YouTube.">
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <h1>My YouTube Videos</h1>
+        <div class="terminal-header">
+            <div class="terminal-bar">
+                <div class="terminal-buttons">
+                    <div class="btn btn-red"></div>
+                    <div class="btn btn-yellow"></div>
+                    <div class="btn btn-green"></div>
+                </div>
+                <div class="terminal-title">terminal@carmelo-sanchez:~/ctf_writeups$</div>
+            </div>
+            
+            <div class="ascii-art">
+ ██████╗████████╗███████╗    ██╗    ██╗██████╗ ██╗████████╗███████╗██╗   ██╗██████╗ ███████╗
+██╔════╝╚══██╔══╝██╔════╝    ██║    ██║██╔══██╗██║╚══██╔══╝██╔════╝██║   ██║██╔══██╗██╔════╝
+██║        ██║   █████╗      ██║ █╗ ██║██████╔╝██║   ██║   █████╗  ██║   ██║██████╔╝███████╗
+██║        ██║   ██╔══╝      ██║███╗██║██╔══██╗██║   ██║   ██╔══╝  ██║   ██║██╔═══╝ ╚════██║
+╚██████╗   ██║   ██║         ╚███╔███╔╝██║  ██║██║   ██║   ███████╗╚██████╔╝██║     ███████║
+ ╚═════╝   ╚═╝   ╚═╝          ╚══╝╚══╝ ╚═╝  ╚═╝╚═╝   ╚═╝   ╚══════╝ ╚═════╝ ╚═╝     ╚══════╝
+            </div>
+            
+            <div class="prompt">root@security:~/ctf_writeups$ ls -la</div>
+            <div class="page-title">CTF Writeups & Tutorials</div>
+            <div class="subtitle">Cybersecurity Challenges | Digital Forensics | Penetration Testing</div>
         </div>
-        <div class="video-grid">
-            <!-- Video 1 -->
-            <div class="video-card">
-                <div class="video-wrapper">
-                    <iframe src="https://www.youtube.com/embed/mPO3I-Yexzc?si=m0HQ4OMBTJ4Ps0ME" 
-                            title="YouTube video player" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                            allowfullscreen>
-                    </iframe>
-                </div>
-                <div class="video-content">
-                    <h3 class="video-title">DISKO 1 CTF</h3>
-                    <p class="video-description">This CTF deals with an imaged linux harddrive, where we can analyze it and find the flag!</p>
-                </div>
-            </div>
 
-            <!-- Video 2 -->
-            <div class="video-card">
-                <div class="video-wrapper">
-                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
-                            title="YouTube video player" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                            allowfullscreen>
-                    </iframe>
-                </div>
-                <div class="video-content">
-                    <h3 class="video-title">Video Title 2</h3>
-                    <p class="video-description">This is a description for the second video. Replace this text with your own video description.</p>
-                </div>
-            </div>
-
-            <!-- Video 3 -->
-            <div class="video-card">
-                <div class="video-wrapper">
-                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
-                            title="YouTube video player" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                            allowfullscreen>
-                    </iframe>
-                </div>
-                <div class="video-content">
-                    <h3 class="video-title">Video Title 3</h3>
-                    <p class="video-description">This is a description for the third video. Replace this text with your own video description.</p>
-                </div>
-                
-            </div>
-            <!-- new grid here for new videos --> 
+        <div class="nav-menu">
+            <div class="prompt">root@security:~/ctf_writeups$ cat navigation.txt</div>
+            <a href="../index.html" class="nav-item">[🏠] ../home</a>
+            <a href="../resume/Carmelo_Sanchez_Resume.pdf" class="nav-item">[📄] ../resume.pdf</a>
+            <a href="https://www.op.gg/summoners/na/Vayne%20666-0001" class="nav-item">[🎮] ../gaming_profile.gg</a>
+            <a href="#" class="nav-item">[📝] ../blog/</a>
         </div>
-        
+
+        <div class="content-box">
+            <div class="section-title">root@security:~/ctf_writeups$ cat README.md</div>
+            <div style="color: #ffffff; line-height: 1.6;">
+                Welcome to my CTF writeups and cybersecurity tutorials! Here you'll find detailed explanations of capture the flag challenges, 
+                digital forensics investigations, and penetration testing methodologies. Each video breaks down complex security concepts 
+                into digestible learning experiences.
+            </div>
+        </div>
+
+        <div class="content-box">
+            <div class="section-title">root@security:~/ctf_writeups$ find . -name "*.mp4" -type f</div>
+            <div class="video-grid">
+                <!-- Video 1 -->
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/mPO3I-Yexzc?si=m0HQ4OMBTJ4Ps0ME" 
+                                title="YouTube video player" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="video-content">
+                        <h3 class="video-title">🔍 DISKO 1 CTF - Digital Forensics</h3>
+                        <p class="video-description">This CTF deals with an imaged linux harddrive, where we can analyze it and find the flag! Learn digital forensics techniques including disk imaging analysis, file recovery, and evidence collection methods.</p>
+                    </div>
+                </div>
+
+                <!-- Video 2 -->
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                                title="YouTube video player" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="video-content">
+                        <h3 class="video-title">🛡️ Network Security Challenge</h3>
+                        <p class="video-description">Explore network security fundamentals through hands-on challenges. This video covers packet analysis, network reconnaissance, and defensive strategies used in cybersecurity.</p>
+                    </div>
+                </div>
+
+                <!-- Video 3 -->
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                                title="YouTube video player" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="video-content">
+                        <h3 class="video-title">🐧 Linux System Administration</h3>
+                        <p class="video-description">Master Linux system administration through practical exercises. Learn command line operations, system monitoring, and security hardening techniques essential for cybersecurity professionals.</p>
+                    </div>
+                </div>
+                <!-- Add more videos here as needed -->
+            </div>
+        </div>
+
+        <div class="status-bar">
+            <span>Videos: 3</span> | 
+            <span>Categories: Digital Forensics, Network Security, Linux</span> | 
+            <span>Status: ACTIVE</span>
+        </div>
     </div>
 </body>
 </html>
