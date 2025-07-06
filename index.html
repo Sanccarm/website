@@ -139,16 +139,16 @@
         </div>
     </div>
     <script src="./script.js"></script>
-    <script>
+     <script>
     document.addEventListener('DOMContentLoaded', function() {
             const asciiSelector = new AsciiSelector();
             
-            // Start rotating ASCII art every 8 seconds
+            // Start rotating ASCII art every 8 seconds (only on desktop)
             const rotationInterval = asciiSelector.startRotation('ascii-art', 8000);
             
-            // Optional: Add click event to manually change ASCII
+            // Optional: Add click event to manually change ASCII (only on desktop)
             const asciiElement = document.getElementById('ascii-art');
-            if (asciiElement) {
+            if (asciiElement && asciiSelector.isDesktop()) {
                 asciiElement.addEventListener('click', function() {
                     asciiSelector.displayAscii('ascii-art');
                 });
@@ -157,6 +157,11 @@
                 asciiElement.style.cursor = 'pointer';
                 asciiElement.title = 'Click to change ASCII art';
             }
+            
+            // Handle window resize to show/hide ASCII art
+            window.addEventListener('resize', function() {
+                asciiSelector.displayAscii('ascii-art');
+            });
         });
     </script>
 </body>

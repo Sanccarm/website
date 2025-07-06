@@ -13,6 +13,19 @@ class AsciiSelector {
         this.currentAscii = '';
     }
 
+    // Method to check if device is desktop (not mobile/tablet)
+    isDesktop() {
+        // Check screen width (desktop typically > 1024px)
+        const screenWidth = window.innerWidth;
+        
+        // Check user agent for mobile indicators
+        const userAgent = navigator.userAgent.toLowerCase();
+        const isMobile = /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini|mobile/.test(userAgent);
+        
+        // Consider desktop if screen width > 1024px AND not mobile user agent
+        return screenWidth > 1024 && !isMobile;
+    }
+    
     // Method to randomly select an ASCII file
     getRandomAsciiFile() {
         const randomIndex = Math.floor(Math.random() * this.asciiFiles.length);
@@ -41,20 +54,28 @@ class AsciiSelector {
         }
     }
 
-    // Method to display ASCII in a specific element
+// Method to display ASCII in a specific element
     async displayAscii(elementId = 'ascii-display') {
-        const ascii = await this.loadRandomAscii();
         const element = document.getElementById(elementId);
         
-        if (element) {
-            element.textContent = ascii;
-            element.style.fontFamily = 'monospace';
-            element.style.whiteSpace = 'pre';
-            element.style.fontSize = '0.7rem';
-            element.style.textAlign = 'center';
-        } else {
+        if (!element) {
             console.error(`Element with ID '${elementId}' not found`);
+            return;
         }
+        
+        // Only show ASCII art on desktop devices
+        if (!this.isDesktop()) {
+            element.style.display = 'none';
+            return;
+        }
+        
+        const ascii = await this.loadRandomAscii();
+        element.style.display = 'block';
+        element.textContent = ascii;
+        element.style.fontFamily = 'monospace';
+        element.style.whiteSpace = 'pre';
+        element.style.fontSize = '0.7rem';
+        element.style.textAlign = 'center';
     }
 
     // Fallback ASCII art if files can't be loaded
