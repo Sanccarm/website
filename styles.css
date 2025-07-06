@@ -1,9 +1,12 @@
 h1 {
-    text-align: center
+    text-align: center;
+    color: #FF9700;
+
 }
 
 h3 {
-    text-align: center
+    text-align: center;
+    color: #FF9700;
 }
 
 body {
@@ -13,6 +16,7 @@ body {
 }
 
 p {
+    color: #FF9700;
     text-align: justify;
     max-width: 991px;
     margin: auto;
