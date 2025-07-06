@@ -2,21 +2,168 @@
 <html lang="en">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="styles.css">
-<title>Carmelo Sanchez</title>
-<meta name="description" content="Carmelo Sanchez's personal page showcasing resume, OP.GG profile, and blog.">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carmelo Sanchez</title>
+    <meta name="description" content="Carmelo Sanchez's personal page showcasing resume, OP.GG profile, and blog.">
+    <link rel="stylesheet" href="./css/mainstyles.css">
 </head>
-<body1>
 
-<h1>Carmelo Sanchez</h1>
-<h3>
-    <a style="text-decoration:none;color:inherit;"href="./resume/Carmelo_Sanchez_Resume.pdf"><b>Resume</b></a> | <a style="text-decoration:none;color: inherit;"rel="OP.GG" href="https://www.op.gg/summoners/na/Vayne%20666-0001"><b>OP.GG</b></a> | <a style="text-decoration:none;color:inherit;"href="./youtube.html"><b>CTFs</b> | Blog
-</h3>
-<hr>
+<body>
+    <div class="header">
+        <h1 class="name">Carmelo Sanchez</h1>
+        <p class="title">Cybersecurity & Technology </p>
+        <div class="contact-info">
+            <p><a href="mailto:Sanccarm@mail.gvsu.edu">Sanccarm@mail.gvsu.edu</a> | Allendale, MI 49401
+            </p>
+        </div>
 
-<p>I have a deep passion for computers, IT security, and building strong communities through technology. I love learning about how systems work and, more importantly, how to protect them from security threats. My goal is to work in IT, where I can use my skills to solve problems, keep information safe, and help others navigate the tech world. I enjoy collaborating with like-minded individuals and constantly expanding my knowledge to stay ahead in the ever-evolving field of cybersecurity.</p>
+        <nav class="navigation">
+            <a href="./resume/Carmelo_Sanchez_Resume.pdf" class="nav-link">Resume PDF</a>
+            <a href="https://www.op.gg/summoners/na/Vayne%20666-0001" class="nav-link">OP.GG</a>
+            <a href="./youtube.html" class="nav-link">CTF Videos</a>
+            <a href="#" class="nav-link">Blog</a>
+        </nav>
+    </div>
 
+    <div class="content">
+        <div class="section">
+            <h2 class="section-title">About Me</h2>
+            <p class="about-text">
+                I'm a B.S. Cybersecurity student at Grand Valley State University with a passion for IT security, risk
+                assessment, and building strong communities through technology. With hands-on experience in IT services
+                and asset management, I specialize in system monitoring, problem resolution, and security analysis. My
+                goal is to leverage my skills in penetration testing, digital forensics, and secure software engineering
+                to protect organizations from evolving cyber threats.
+            </p>
+            <p class="contact-info">Current Profession: IT Technician</p>
+            <div class="quote">
+            "The best way to learn cybersecurity is to get your hands dirty and never stop exploring."
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Education</h2>
+            <div class="experience-item">
+                <div class="experience-title">B.S. Cybersecurity</div>
+                <div class="experience-company">Grand Valley State University</div>
+                <div class="experience-desc">
+                    <strong>Additional Coursework:</strong> Databasing, Wireless and Wired Network Engineering, Linux
+                    Systems Management, Secure Software Engineering, Digital Forensics
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Experience</h2>
+            <div class="experience-item">
+                <div class="experience-title">IT Services Asset Management Intern</div>
+                <div class="experience-company">Grand Valley State University, Allendale, MI</div>
+                <div class="experience-date">August 2024 – December 2024</div>
+                <ul class="experience-desc">
+                    <li>Audited departmental assets using TeamDynamix and developed solutions to enhance tracking of
+                        incoming and end-of-life machines</li>
+                    <li>Utilized Splunk to monitor and identify unused and miscounted machines</li>
+                    <li>Analyzed machine life-cycles to identify and address life-cycle issues</li>
+                </ul>
+            </div>
+            <div class="experience-item">
+                <div class="experience-title">IT Services Technician</div>
+                <div class="experience-company">Grand Valley State University, Allendale, MI</div>
+                <div class="experience-date">October 2022 – Current</div>
+                <ul class="experience-desc">
+                    <li>Manages IT ticket triage in TeamDynamix, guaranteeing swift problem resolution via email and
+                        tickets</li>
+                    <li>Assisted phone calls to troubleshoot software and hardware problems</li>
+                    <li>Resolved software and hardware issues for students and faculty in-person</li>
+                    <li>Directed regular service for computers, printers, and other office technology</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4>Core Competencies</h4>
+                    <ul>
+                        <li>Risk Assessment</li>
+                        <li>Team Leadership</li>
+                        <li>Problem Resolution</li>
+                        <li>Client Support</li>
+                        <li>SIEM</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h4>Technical Skills</h4>
+                    <ul>
+                        <li>Linux/Ubuntu</li>
+                        <li>Python</li>
+                        <li>Go</li>
+                        <li>Wireshark</li>
+                        <li>Splunk</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h4>Familiar With</h4>
+                    <ul>
+                        <li>C Programming</li>
+                        <li>Wired and Wireless Systems</li>
+                        <li>Active Directory</li>
+                        <li>AWS</li>
+                        <li>Firebase</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Projects</h2>
+            <div class="experience-item">
+                <div class="experience-title">GVGameLauncher</div>
+                <div class="experience-desc">
+                    A small, GVSU themed game launcher developed using Go, in Godot 4. Utilizes Google Firebase's blob
+                    storage and authentication which hosts a variety of games to download and play. All downloadable
+                    games were developed in Python.
+                </div>
+            </div>
+            <div class="experience-item">
+                <div class="experience-title">Personal Mail Server</div>
+                <div class="experience-desc">
+                    A personal email server deployed on a home server using Docker. Utilized Cloudflare DNS, Smtp2Go,
+                    and MailCow. Depreciated due to insufficient resources.
+                </div>
+            </div>
+        </div>
+
+        <div class="highlights">
+            <div class="highlight-item">
+                <div class="highlight-icon">🛡️</div>
+                <h3 class="highlight-title">Security Focus</h3>
+                <p class="highlight-desc">Specializing in SIEM, vulnerability assessment, and digital forensics</p>
+            </div>
+            <div class="highlight-item">
+                <div class="highlight-icon">🏆</div>
+                <h3 class="highlight-title">CTF Competitor</h3>
+                <p class="highlight-desc">Active participant in Capture The Flag competitions and security challenges
+                </p>
+            </div>
+            <div class="highlight-item">
+                <div class="highlight-icon">📜</div>
+                <h3 class="highlight-title">Certified Professional</h3>
+                <p class="highlight-desc">Google Cybersecurity Certification from Coursera and Google</p>
+            </div>
+        </div>
+
+        <div class="quote">
+            "The best way to learn cybersecurity is to get your hands dirty and never stop exploring."
+        </div>
+    </div>
+
+    <div class="contact">
+        <h3>Let's Connect</h3>
+        <p>Always interested in discussing cybersecurity, technology, and new opportunities</p>
+    </div>
 </body>
+
 </html>
